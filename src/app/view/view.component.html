@@ -1,0 +1,10 @@
+<div *ngFor="let i of realData">
+    <div style="width: 270px; display: inline-block; height: 270px" *ngIf="realData"><img src="{{i['album']['images'][0]['url']}}" alt="avatar" width="256px" height="256px"></div>
+    <div style="display: inline-block">
+        <span><h3>Album name: {{i['name']}}</h3></span>
+        <p>Release Date: {{i['album']['release_date']}}</p>
+        <a href="{{i['preview_url']}}"><button class="btn btn-sm btn-warning">Play preview</button></a>
+        <!-- <iframe  style="width: 200px;height:200px; margin-left: 500px" src="{{i['preview_url']}} | safe"></iframe> -->
+    </div>
+    
+</div>

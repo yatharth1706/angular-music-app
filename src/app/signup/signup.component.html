@@ -1,0 +1,20 @@
+<div class="mt-5" style="width: 70%; padding: 30px">
+  <h3>Search for Artist</h3>
+  <div class="form-group">
+    <input type="text" class="form-control" name="artist" [(ngModel)]="artist">
+  </div>
+  <button type="submit" class="btn btn-sm btn-warning" (click)="searchArtist(artist)">Search</button>
+</div>
+
+<div class="row">
+<div class="col-sm-4" *ngFor="let i of indexes">
+  <div class="card text-blank center" style="height: 300px; margin-top: 30px">
+    <div class="card-title center">
+      <a routerLink="/view/{{items[i]['id']}}"><h3>{{items[i]['name']}}</h3></a>
+    </div>
+    <div class="card-body" style="padding: 0; width: 100%">
+      <img src="{{items[i]['images'][0]['url']}}" style="width: 100%; height: 250px" alt="avatar">
+    </div>
+  </div>
+</div>
+</div>
