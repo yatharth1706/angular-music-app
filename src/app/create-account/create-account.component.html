@@ -1,0 +1,13 @@
+<div class="row mt-5">
+    <div class="col-sm-6 offset-sm-3">
+        <h3 style="text-align: center">Signup Form</h3>
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            
+            <input type="text" class="form-control" placeholder="Enter Name" name="name" ngModel required>
+            <input type="email" class="form-control" placeholder="Enter Email" name="email" ngModel required email #email="ngModel">
+            <span *ngIf="!email.valid && email.touched">Invalid Email</span>
+            <input type="password" class="form-control" placeholder="Enter password" name="password" ngModel>
+            <button type="submit" class="btn btn-sm btn-primary btn-block" [disabled]="!f.valid">Submit</button>
+        </form>
+    </div>
+</div>

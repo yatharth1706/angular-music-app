@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  token = 'BQAtXxJ5Fe2Kgk0zJaTDunwaUl9HXlvplD8OVJ06Qj0QThOQjVXqAt938cO4Gk9mtupnyOb_eFPv6KqSlm4vsquwtbyxDych6YaRwrYhAQZxrjA5AHAGYIEajMrFNmilgArAkuo48cz0EMV5byTLCc5CHxGh9TGp4Q';
+  token = 'BQBb48RFjPdzd-fXAqDxAFq5gt24_jb5hFjhb0gXMh4V9fQ3e-dCBhmirzNgULfSdptEzkpdes3XvxHfG1X-8wMOqvGi6muu_gCQjb9ZfEskwlW-Wu-9sKAUufCrbhREzk4CCNeCAhRQM4Zak2ySUuYnMKxZzoFpEw';
   baseUrl = 'https://api.spotify.com/v1';
 
   httpOptions = {
