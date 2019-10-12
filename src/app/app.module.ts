@@ -20,6 +20,7 @@ import { FilterPipe } from './filter.pipe';
 import { CreateAccountPipe } from './create-account.pipe';
 // import { CreateAccountComponent } from './create-account/create-account.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     ShortPipe,
     FilterPipe,
     CreateAccountPipe,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

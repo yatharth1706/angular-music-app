@@ -1,0 +1,145 @@
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 80px 0;
+}
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../assets/music.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    
+}
+
+h1{
+    font-size: 240%;
+    color: #fff;
+    font-weight: 350;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+h3{
+    font-size: 100%;
+    color: #000;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section h2:after{
+    display: block;
+    height: 2px;
+    background-color: #1e90ff;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.text-box h2{
+    font-size: 140%;
+    color: #fff;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.btn:link,.btn:visited {
+    display: inline-block;
+    padding: 3px 20px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+    margin-right: 15px;
+}
+
+.btn-full:link,.btn-full:visited{
+
+    background-color: #1e90ff;
+}
+.btn-ghost:link,.btn-ghost:visited{
+    border: 1px solid #1e90ff;
+    color: #1e90ff;
+}
+
+.btn:hover,.btn:active{
+    background-color: #006ed9;
+}
+
+.btn-full:hover,.btn-full:active{
+
+    background-color: #006ed9;
+}
+.btn-ghost:hover,.btn-ghost:active{
+    border: 1px solid #006ed9;
+    color: #fff;
+}
+
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+img{
+    height: 100%;
+}
+.main-navv{
+    float: right;
+    margin-left: 45%;
+    margin-top: 55px;
+}
+
+.main-navv li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-navv li a:link,.main-navv li a:visited{
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-navv li a:hover,.main-navv li a:active{
+    border-bottom: 2px solid #1e90ff;
+}
+
+.box{
+    padding: 1%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.icon-big{
+   font-size: 350%;
+   display: block;
+   color:  #1e90ff;
+   margin-bottom: 10px;
+}
