@@ -1,145 +1,512 @@
+@import url('https://fonts.googleapis.com/css?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap');
+
 .row{
-    max-width: 1140px;
-    margin: 0 auto;
+    margin: 0;
 }
 
-section{
-    padding: 80px 0;
+/* ----------- logo -------------------- */
+
+
+.bg-yv{
+    background-color: transparent;
 }
 
-header{
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../../assets/music.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+.navbar-yv a{    
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+
+
+
+#navbarNav ul li{
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    padding: 5px 5px;
+    margin-left: 10px;
+    background-color: transparent;
+    transition: background-color 0.5s;
+    text-align: center;
+}
+
+#navbarNav ul li a{
+    transition: 0.7s ease-in-out;
+}
+
+#navbarNav ul li.active a{
+    border-bottom: solid 1px white ;
+    color: white;
+}
+
+#navbarNav ul li:hover a{
+    border-bottom: solid 1px black ;
+    color: white
 }
 
 .text-box{
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    
+    margin-top: 50px;
+    width: 800px;
+    background-attachment: fixed;
+}
+.text-box h1{
+    font-family: 'Knewave';
+    font-weight: 300;
+    color: #fde4d2;
+    letter-spacing: 2px;
+    font-size: 90px;
 }
 
-h1{
-    font-size: 240%;
-    color: #fff;
+.back-image{
+    background-image:url('../../assets/Stream2.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+
+}
+
+
+
+/* -------- back image text ------------ */
+
+
+
+/*----------------- Buttons   ----------------*/
+
+.btn:link,.btn:visited {
+    display: inline-block;
+    padding: 3px 20px;
     font-weight: 350;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    word-spacing: 4px;
-}
-
-h3{
-    font-size: 100%;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 100px;
     color: #000;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 30px;
+    transition: background-color 0.5s, color 0.8s, border 0.8s;
+    margin-right: 15px;
 }
 
-section h2{
+.btn-full:link,.btn-full:visited{
+    background-color: #fff;
+    color: #000;
+}
+.btn-ghost:link,.btn-ghost:visited{
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.btn:hover,.btn:active{
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-primary:hover,.btn-primary:active{
+
+    background-color: darkblue;
+    color: #000;
+}
+
+.btn-ghost{
+    border: 1px solid blue;
+}
+
+.btn-ghost:hover,.btn-ghost:active{
+    background-color: #ff0000;
+    border: 1px solid blue;
+    color: #495057;
+}
+
+h2{
+    color: #495057!important;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-section h2:after{
+h2:after{
     display: block;
     height: 2px;
     background-color: #1e90ff;
     content: "";
     width: 100px;
-    margin: 0 auto;
+    margin: 0px auto;
     margin-top: 30px;
 }
 
-.text-box h2{
-    font-size: 140%;
-    color: #fff;
-    font-weight: 200;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-}
-.btn:link,.btn:visited {
-    display: inline-block;
-    padding: 3px 20px;
-    font-weight: 300;
-    text-decoration: none;
-    border-radius: 200px;
-    color: #fff;
-    transition: background-color 0.2s, color 0.2s, border 0.2s;
-    margin-right: 15px;
-}
-
-.btn-full:link,.btn-full:visited{
-
-    background-color: #1e90ff;
-}
-.btn-ghost:link,.btn-ghost:visited{
-    border: 1px solid #1e90ff;
-    color: #1e90ff;
-}
-
-.btn:hover,.btn:active{
-    background-color: #006ed9;
-}
-
-.btn-full:hover,.btn-full:active{
-
-    background-color: #006ed9;
-}
-.btn-ghost:hover,.btn-ghost:active{
-    border: 1px solid #006ed9;
-    color: #fff;
-}
-
-
-.logo{
-    height: 100px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
-}
-img{
-    height: 100%;
-}
-.main-navv{
-    float: right;
-    margin-left: 45%;
-    margin-top: 55px;
-}
-
-.main-navv li{
-    display: inline-block;
-    margin-left: 40px;
-}
-
-.main-navv li a:link,.main-navv li a:visited{
-    padding: 8px 0;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.2s;
-}
-
-.main-navv li a:hover,.main-navv li a:active{
-    border-bottom: 2px solid #1e90ff;
-}
-
-.box{
-    padding: 1%;
-}
-
-.box p{
-    font-size: 90%;
-    line-height: 145%;
-}
 
 .icon-big{
-   font-size: 350%;
-   display: block;
-   color:  #1e90ff;
-   margin-bottom: 10px;
+    font-size: 350%;
+    display: block;
+    color:  #1e90ff;
+    margin-bottom: 10px;
+ }
+
+
+
+ /* ------- Songs Pictures ------------ */
+ .songs-container{
+        height: 100%;
 }
+
+.songs-row{
+    height: 50%;
+}
+
+ .songs-showcase{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+ }
+
+ .songs-showcase li{
+     display: block;
+     float: left;
+     height: 100%;
+     margin: 0px;
+     width: 25%;
+     padding: 0;
+ }
+
+ .songs{
+     background-color: black;
+    
+     height: 100%;
+     margin:0;
+     padding: 0;
+     overflow: hidden;
+ }
+
+.songs img{
+     height: 100%;
+     width: 100%;
+}
+
+.section-songs{
+    width: 100%;
+    margin-top: 40px;
+    height: 600px;
+    background-attachment: fixed;
+}
+
+.card{
+    height: 387px;
+}
+
+.songs img{
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.10);
+    transition: transform 0.4s,opacity 0.4s;
+}
+
+ .songs img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+ }
+
+
+
+.features{
+    margin-top: 40px;
+}
+
+h3{
+    color: #495057
+}
+.yo{
+    background-image:url('../../assets/Quarkgrove.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+/* ------------------- Caraousel ---------------------- */
+
+#carousel {
+    width: 100%;
+    height: 150px;
+    background-color: #ff0000;
+    
+    overflow: visible;
+    white-space:nowrap;
+}
+
+#carousel .slide {
+    display: inline-block;
+}
+
+
+.search{
+    
+    margin-top:70px;
+}
+
+/* -------- Scroll Top ---------- */
+.scrolltop {
+	display:none;
+	width:100%;
+	margin:0 auto;
+	position:fixed;
+	bottom:20px;
+	right:10px;	
+}
+.scroll {
+	position:absolute;
+	right:20px;
+	bottom:20px;
+	background:rgba(178,178,178,0.7);
+	padding:20px;
+	text-align: center;
+	margin: 0 0 0 0;
+	cursor:pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scroll:hover {
+	background:rgba(178,178,178,1.0);
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 		
+}
+.scroll:hover .fa {
+	padding-top:-10px;
+}
+.scroll .fa {
+	font-size:30px;
+	margin-top:-5px;
+	margin-left:1px;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s; 	
+}
+
+.card{
+    height: 420px;
+    margin-left: 120px;
+    margin-right: 53px;
+
+    margin-bottom: 60px;
+}
+/* ------------------------------------- */
+/*               Footer                  */
+/* ------------------------------------- */
+
+footer {
+    background-color: #333;
+    padding: 30px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+/* --------------------- media queries ------------------ */
+
+@media(max-width: 1176px){
+    .card{
+        margin-left: 60px;
+        margin-right: 40px;
+        height: 400px;
+    }
+    .text-box{
+        margin-top: 5px;
+        width: 600px;
+    }
+    .text-box h1{
+        font-size: 50px;
+    }
+    .section-songs{
+        height: 500px; 
+    }
+    .images img{
+        height: 320px;
+    }
+    
+}
+@media (max-width: 1024px){
+    .section-songs{
+        height: 450px; 
+    }
+
+    .card{
+        margin-left: 54px;
+        margin-right: 29px;
+        height: 400px;
+    }
+    .text-box{
+        margin-top: 0px;
+        width: 600px;
+    }
+    .text-box h1{
+        font-size: 50px;
+    }
+    .images img{
+        height: 320px;
+    }
+}
+
+@media (max-width: 976px){
+    .card{
+        margin-left: 29px;
+        margin-right: 6px;
+        height: 375px;
+    }
+    .text-box{
+        margin-top: 0px;
+        width: 500px;
+    }
+    .text-box h1{
+        font-size: 50px;
+    }
+    .section-songs{
+        height: 440px; 
+    }
+    .images img{
+        height: 310px;
+    }
+}   
+
+@media (max-width: 768px){
+     
+    .text-box{
+        margin-top: 0px;
+        width: 400px;
+        
+    }
+    .text-box h1{
+        font-size: 45px;
+    }
+    .card{
+        margin-left: 5px;
+        margin-right: -14px;
+        height: 377px;
+    }
+    .images img{
+        height: 300px;
+    }
+    .section-songs{
+        height: 400px; 
+    }
+}
+
+
+@media (max-width: 670px){
+    .card{
+        margin-left: 4px;
+        margin-right: 4px;
+        height: 320px;
+    }
+    .section-songs{
+        height: 380px; 
+    }
+    .text-box{
+        margin-top: 0px;
+        width: 300px;
+    }
+    .text-box{
+        margin-top: 100px;
+    }
+    .text-box h1{
+        font-size: 22px;
+    }
+    .navbarNav ul li {
+        font-size: 10px;
+    }
+    .images img{
+        height: 250px;
+    }
+    
+}
+     
+@media (max-width: 575px){
+    .card{
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 420px;
+    }
+    .section-songs{
+        height: 320px; 
+    }
+    .images img{
+        height: 360px;
+    }
+
+}
+     
+
+

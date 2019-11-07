@@ -1,52 +1,162 @@
-<header>
-    <nav>
-           <div class="row">
-               <div class="logo">
-                <img src="assets/logo.png" alt="music logo">
+<div class="back-image thetop">
+        <nav class="navbar navbar-expand-lg navbar-dark navc p-0 container-fluid">
+                <a class="navbar-brand" href="#"><img src="../../assets/logo.png" alt="logo" style="height: 70px; width: 70px"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span style="font-size: 40px;color: white;"><i class="ion-android-more-horizontal"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" routerLink=""><i class="ion-home"></i> Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" data-page="release"><i class="ion-lightbulb"></i> New Releases</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" routerLink="/signup"><i class="ion-person"></i> Signup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/login"><i class="ion-person"></i> SignIn</a>
+                      </li>
+                  </ul>
                 </div>
-                <ul class="main-navv">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Artists</a></li>
-                    <li><a href="">Latest Songs</a></li>
-                    <li><a href="">About</a></li>
+            </nav>
+            
+            <div class="text-box container-fluid p-5 text-center">
+                <h1>STREAM MUSIC TOGETHER</h1>
+                <span style="font-size: 40px;color: white;"><i class="ion-music-note"></i></span>
+            </div>
+        </div>
+
+<div class="features container-fluid text-center p-2" data-aos="fade-right" data-aos-offset="300" data-aos-duration="500" data-aos-easing="ease-in-sine">
+
+                <h2>Instant Access To Music</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <i class="ion-ios-refresh-outline icon-big"></i>
+                        <h3 style="width: 100%">30 Seconds Preview</h3>
+                        <p style="width: 100%">You can also take free plan. But only 30 seconds preview will be provided to you. Download facility not available in this plan</p>
+                    </div>
+            
+                    <div class="col-md-3 col-sm-6">
+                        <i class="ion-ios-infinite-outline icon-big"></i>    
+                        <h3 style="width: 100%">One time Subscription</h3>
+                        <p style="width: 100%">Easy Subscription Steps and Access of All songs up to 365 days/year upto lifetime</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <i class="ion-social-usd-outline icon-big"></i>
+                        <h3 style="width: 100%">CashBack Guarantee</h3>
+                        <p style="width: 100%">If you are not satisfied with our website, your money will be refunded 100% without any interest</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <i class="ion-network icon-big"></i>
+                        <h3 style="width: 100%">Easy Subscription</h3>
+                        <p style="width: 100%">Easy Subscription Steps and Access of All songs up to 365 days/year</p>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+<div class="container-fluid text-center" id="release" style="margin-top: 50px" data-aos="zoom-in"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine" data-aos-duration="500">
+    <h2>New Releases</h2>
+</div> 
+
+<div data-aos="zoom-in"
+data-aos-offset="300"
+data-aos-easing="ease-in-sine" data-aos-duration="500" class="section-songs container-fluid p-2">
+        
+        <div class="songs-container">    
+            <div class="songs-row">
+                <ul class="songs-showcase">
+                    <li  *ngFor="let x of firstAlbums">
+                        <figure class="songs">
+                            <a href="{{x['external_urls']['spotify']}}"><img src="{{x['images'][0]['url']}}" alt="music"></a> 
+                        </figure>   
+                    </li>
                 </ul>
             </div>
-    </nav>
-    <div class="text-box">
-        <h1>Stream Music Together</h1>
-        <h2>Listen, play, discover and connect with Music</h2>
-        <a class="btn btn-full" href="">Signup for Free</a>
-        <a class="btn btn-ghost" href="">Login</a>
+            
+            <div class="songs-row">
+                <ul class="songs-showcase">
+                    <li *ngFor="let x of secondAlbums" >
+                        <figure class="songs">
+                            <a href="{{x['external_urls']['spotify']}}"><img src="{{x['images'][0]['url']}}" alt="music"></a>
+                        </figure>   
+                    </li>
+                </ul>
+            </div>
+    </div>
+</div>
+  
+<div class="container-fluid p-2 text-center search" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="500" data-aos-easing="ease-in-sine">
+    
+        <h3 style="color: black; margin-bottom: 40px">Search for Artist  <span><i class="ion-ios-search-strong"></i></span></h3>
+        <div class="form-group">
+          <input type="text" class="form-control" name="artist" [(ngModel)]="artist">
+        </div>
+        <button type="submit" class="btn btn-sm btn-dark" (click)="searchArtist(artist)">Search</button>
+        
+        <div class="container-fluid mt-5 yo">
+            <div class="row">
+                <div class="col-md-6 col-sm-6" *ngFor="let i of indexes">
+                        <div class="card images" style="margin-top: 10px" >
+                                <img src="{{items[i]['images'][0]['url']}}" alt="" class="card-img-top" height="350px">
+                        <div class="card-body">
+                                <h5 class="card-title"><a routerLink="/view/{{items[i]['id']}}">{{items[i]['name']}}</a></h5>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
     
-</header>
 
-<section class="section-features">
-    
-        <h2>Instant Access To Music</h2>
+
+<div class='scrolltop'>
+    <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
+</div>
+
+
+
+
+
+<!-- --------- footer --------- -->
+
+
+
+<footer class="margin-top: 100px">
     <div class="row">
-        <div class="col span-1-of-4 box">
-            <i class="ion-ios-refresh-outline icon-big"></i>
-            <h3>30 Seconds Preview</h3>
-            <p>You can also take free plan. But only 30 seconds preview will be provided to you. Download facility not available in this plan</p>
+        <div class="col span-1-of-2">
+            <ul class="footer-nav">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">iOS App</a></li>
+                <li><a href="#">Android App</a></li>
+            </ul>
         </div>
-
-        <div class="col span-1-of-4 box">
-            <i class="ion-ios-infinite-outline icon-big"></i>    
-            <h3>One time Subscription</h3>
-            <p>Easy Subscription Steps and Access of All songs up to 365 days/year upto lifetime</p>
-        </div>
-        <div class="col span-1-of-4 box">
-            <i class="ion-social-usd-outline icon-big"></i>
-            <h3>CashBack Guarantee</h3>
-            <p>If you are not satisfied with our website, your money will be refunded 100% without any interest</p>
-        </div>
-        <div class="col span-1-of-4 box">
-            <i class="ion-network icon-big"></i>
-            <h3>Easy Subscription</h3>
-            <p>Easy Subscription Steps and Access of All songs up to 365 days/year</p>
+        <div class="col span-1-of-2">
+            <ul class="social-links">
+                <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+            </ul>
         </div>
     </div>
-    
-</section>
+    <div class="row">
+        <p>
+            Copyright &copy; 2015 by Musico. All rights reserved.
+        </p>
+    </div>
+</footer>
 
+
+    
+
+    

@@ -1,10 +1,96 @@
-<div *ngFor="let i of realData">
-    <div style="width: 270px; display: inline-block; height: 270px" *ngIf="realData"><img src="{{i['album']['images'][0]['url']}}" alt="avatar" width="256px" height="256px"></div>
-    <div style="display: inline-block">
-        <span><h3>Album name: {{i['name']}}</h3></span>
-        <p>Release Date: {{i['album']['release_date']}}</p>
-        <a href="{{i['preview_url']}}"><button class="btn btn-sm btn-warning">Play preview</button></a>
-        <!-- <iframe  style="width: 200px;height:200px; margin-left: 500px" src="{{i['preview_url']}} | safe"></iframe> -->
-    </div>
-    
-</div>
+<!-- ---------------- Icon Bar ------------------------- -->
+
+<div class="backimg">
+        <div class="icon-bar">
+                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="google"><i class="fa fa-google"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+        </div>
+
+     <!-- ------------------- Navbar -------------------------    -->
+
+    <nav class="navbar navbar-expand-lg navbar-light yv navc p-2 container-fluid">
+        <a class="navbar-brand" href="#"><img src="../../assets/logo.png" alt="logo" style="height: 70px; width: 70px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink=""><i class="ion-home"></i> Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-page="release"><i class="ion-lightbulb"></i> New Releases</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/signup"><i class="ion-person"></i> Signup</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/signup"><i class="ion-person"></i> SignIn</a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+
+  <!-- --------------------- Music Gallary ----------------------------- -->
+
+  <div class="containerr" style=" margin-left: 60px; margin-right: 30px">
+        
+      <div class="container-fluid mt-3">
+                <div class="row">
+                    
+                  <div class="col-md-6" *ngFor="let i of realData;let j = index">
+                         
+                      <div class="card">
+                                    <img class="card-img-top" src="{{i['album']['images'][0]['url']}}" alt="Card image cap" height="320px">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="font-size: 20px" #title>{{i['name']}}</h5>
+                                        <button class="btn btn-sm btn-primary" (click)="fn1(j,title.innerHTML,j)" routerLink="audio#" #play>Play Preview</button>
+                                        <!-- <button class="btn btn-sm btn-primary" (click)="findVideos(title.innerHTML,j)" style="margin-left: 15px">Play Video</button> -->
+                                    </div>
+                                    
+                                  </div>
+                              
+                          
+                            
+                                        
+                    </div>
+                </div>
+            </div>
+              
+          </div>
+            
+          </div>
+
+          
+<footer class="margin-top: 100px">
+  <div class="row">
+      <div class="col span-1-of-2">
+          <ul class="footer-nav">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">iOS App</a></li>
+              <li><a href="#">Android App</a></li>
+          </ul>
+      </div>
+      <div class="col span-1-of-2">
+          <ul class="social-links">
+              <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+              <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+              <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+              <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="row">
+      <p>
+          Copyright &copy; 2015 by Musico. All rights reserved.
+      </p>
+  </div>
+</footer>
+
+
+

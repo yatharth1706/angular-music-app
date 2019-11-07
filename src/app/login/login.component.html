@@ -1,0 +1,126 @@
+<div class="wrapper">
+    <div class="container-fluid navi" >  
+    <nav class="navbar navbar-expand-lg navbar-light yv p-2 container-fluid">
+          <a class="navbar-brand" href="#"><img src="../../assets/logo.png" alt="logo" style="height: 70px; width: 70px"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" routerLink=""><i class="ion-home"></i> Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-page="release"><i class="ion-lightbulb"></i> New Releases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/signup"><i class="ion-person"></i> Signup</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" routerLink="/login"><i class="ion-person"></i> SignIn</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+    <div class="form-container container">
+      <span class="form-heading">LOG IN</span>
+      <div>
+      <form name="form" #f="ngForm" novalidate>
+          <div class="form-group">
+            <i class="ion-person"></i>
+            <input
+              class="form-control input-group"
+              type="text"
+              name="username"
+              [(ngModel)]="model.username"
+              placeholder="username"
+              #username="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
+              required
+            />
+            <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+              <div style="padding-left: 30px;" *ngIf="username.errors.required">
+                Username is required
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <i class="ion-locked"></i>
+            <input
+              class="form-control input-group"
+              type="password"
+              name="password"
+              [(ngModel)]="model.password"
+              placeholder="password"
+              #password="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+              required
+              minlength="6"
+            />
+            <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+              <div style="padding-left: 30px;" *ngIf="password.errors.required">
+                Password is required
+              </div>
+              <div style="padding-left: 30px;" *ngIf="password.errors.minlength">
+                Password must be at least 6 characters
+              </div>
+            </div>
+          </div>
+          <div class="button-holder">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block airplane">
+              <span style="font-size: 25px;"><i class="ion-paper-airplane"></i></span>
+            </button>
+          </div>
+          <div class="switch-login">
+            <a href="">Already have an account, <span>login</span></a>
+          </div>
+          <div class="social">
+              <button class="btn btn-block yvv">
+                <i class="ion-social-facebook"></i> Login with Facebook
+              </button>
+              
+              <button class="btn btn-block btn-primary">
+                <i class="ion-social-twitter"></i> Login with Twitter
+              </button>
+        
+              <button class="btn btn-block btn-danger">
+                <i class="ion-social-google"></i> Login with Google+
+              </button>
+            </div>
+          </div>                       
+        </form>
+        </div>
+    </div>
+  </div>
+
+  
+<footer class="margin-top: 100px">
+  <div class="row">
+      <div class="col span-1-of-2">
+          <ul class="footer-nav">
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">iOS App</a></li>
+              <li><a href="#">Android App</a></li>
+          </ul>
+      </div>
+      <div class="col span-1-of-2">
+          <ul class="social-links">
+              <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+              <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+              <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+              <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="row">
+      <p>
+          Copyright &copy; 2015 by Musico. All rights reserved.
+      </p>
+  </div>
+</footer>
