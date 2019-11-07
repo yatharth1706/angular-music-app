@@ -1,3 +1,13 @@
+.navbar-light .navbar-nav .nav-link {
+  color: black;
+}
+.navi{
+  margin-bottom: 0px;
+}
+#navbarNav ul li{
+  text-align: center;
+}
+
 .wrapper{
   background-image: url('../../assets/Quarkgrove.jpg');
   background-size: cover;
@@ -5,15 +15,13 @@
   top: 0;
   padding: 0 0;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
 }
 .wrapper {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-form{
-  height: 400px;
-}
+
 .form-container {
   padding: 40px 10px;
   background-color: #fff;
@@ -33,7 +41,7 @@ form{
   top: 0;
   left: 0;
   width: 100%;
-  height: 280px;
+  height: 200px;
   background: linear-gradient(to left, blue, pink);
   border-bottom-right-radius: 100%;
   border-bottom-left-radius: 100%;
@@ -43,37 +51,39 @@ form{
 .form-heading {
   color: #fff;
   font-size: 32px;
-  position: absolute;
+  position: relative;
   top: 5px;
   left: 140px;
 }
 
-.form-group{
-  width: auto;
-}
-
-.button-holder{
-  height: 100px;
-}
-
-form {
-  width: 100%;
+.form {
   margin-top: 20px;
-  transform: translateX(120px);
+  height: 100%;
   padding: 10px;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.9);
 }
 
-.input-group {
-  display: inline-block;
-  width: auto;
-  margin-left: 5px;
-  font-size: 16px;
+.form-holder{
+  transform: translateX(120px);
+  width: 400px;
 }
 
+.input-group {
+  display: inline-block;
+  width: 94%;
+  margin-left: 5px;
+  font-size: 16px;
+  position: relative;
+}
+
+.form-group{
+  width: auto;
+  height: auto;
+}
 .form-group button {
+  width: 100%; 
   background: linear-gradient(to left, blue, pink);
   border: none;
   border-radius: 20px;
@@ -87,6 +97,7 @@ form {
 }
 
 .switch-login {
+  width: 100%;
   text-align: center;
 }
 
@@ -98,10 +109,6 @@ form {
 
 .switch-login a span {
   color: blue;
-}
-.yvv{
-  color: #0c5460!important;
-  background-color: #e9ecef!important;
 }
 
 
@@ -226,8 +233,8 @@ footer p {
     height: 370px;
     width: 90%
   }
-  form{
-    transform: translateX(50px);
+  .form-holder{
+    transform: translateX(90px);
   }
 }
 
@@ -239,8 +246,8 @@ footer p {
     height: 370px;
     width: 90%
   }
-  form{
-    transform: translateX(40px);
+  .form-holder{
+    transform: translateX(70px);
   }
 }
    
@@ -250,8 +257,8 @@ footer p {
     height: 370px;
     width: 90%
   }
-  form{
-    transform: translateX(30px);
+  .form-holder{
+    transform: translateX(40px);
   }
 }
 @media (max-width: 490px){
@@ -260,7 +267,15 @@ footer p {
     height: 370px;
     width: 90%
   }
-  form{
-    transform: translateX(20px);
+  .form-holder{
+    transform: translateX(40px);
+  }
+}
+@media screen and (max-width: 790px) {
+  form {
+    border-radius: initial;
+    transform: initial;
+    box-shadow: none;
+    border: none;
   }
 }
