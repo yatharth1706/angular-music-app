@@ -180,16 +180,23 @@ footer p {
 
 @media (max-width: 1140px){
     .card{
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 16px;
+        margin-right: 0px;
         
       }
 }
 
 @media (max-width: 862px){
     .card{
-        margin-left: 25px;
-        margin-right: 20px;
+        margin-left: 16px;
+        margin-right: -19px;
         
       }
+}
+
+@media (max-width: 760px){
+  .card{
+    margin-left: 50px;
+    margin-right: 20px;
+  }
 }
